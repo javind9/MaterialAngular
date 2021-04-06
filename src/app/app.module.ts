@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule} from '@angular/material';
+import { MatButtonModule, MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule} from '@angular/material';
 import { MatBadgeModule} from '@angular/material/badge';
 
 
@@ -18,7 +18,8 @@ import { MatBadgeModule} from '@angular/material/badge';
     MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
