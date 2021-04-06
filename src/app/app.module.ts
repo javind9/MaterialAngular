@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MatButtonModule, MatButtonToggleModule} from '@angular/material';
+import {MatButtonModule, MatButtonToggleModule, MatIconModule} from '@angular/material';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import {MatButtonModule, MatButtonToggleModule} from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
