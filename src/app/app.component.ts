@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { MatTableDataSource } from '@angular/material'
 
 
 export interface PeriodicElement {
@@ -29,12 +30,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
-    displayedColumns: string[] = ['position', 'name', 'weight'];
-    displayedColumnsData: string[] = ['position', 'name', 'weight', 'symbol'];
-    dataSource = ELEMENT_DATA;
+    displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-    logData(row) {
+    logData(row){
       console.log(row);
+    }
+
+
+    applyFilter(filterValue: String){
+      this.dataSource.filter = filterValue.trim().toLowerCase();
     }
 }
 
